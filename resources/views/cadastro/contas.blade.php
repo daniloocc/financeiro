@@ -4,7 +4,7 @@
 
 @push('css')
     <style>
-        .info-box span{
+        .info-box span {
             color: #000;
             text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
             -webkit-text-stroke-width: 0.07px; /* largura da borda */
@@ -13,6 +13,9 @@
 
         .info-box-icon {
             box-shadow: 0px 10px #888888;
+        }
+        .progress-description {
+            text-align: center
         }
     </style>
 @endpush
@@ -56,9 +59,12 @@
                         <span class="progress-description">
                             {{number_format((floatval($conta->saldo / $soma)*100)), 2, ',', ''}}% da renda total
                         </span>
-                        <span class="progress-description right">
-                            <button type="button" class="btn btn-defaut btn-xs"><i class="fa fa-edit"></i> Editar</button>
-                            <button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</button>
+                        <span class="progress-description" style="text-align: center">
+                            <div class="btn-group-xs" style="margin: 0 auto;">
+                                <a href="#" class="btn btn-default btn-xs"><i class="fa fa-info"></i> + detalhes</a>
+                                <a href="#" class="btn btn-default btn-xs"><i class="fa fa-edit"></i> editar</a>
+                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> excluir</a>
+                            </div>
                         </span>
                     </div>
                     <!-- /.info-box-content -->
