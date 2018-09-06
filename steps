@@ -1,0 +1,20 @@
+php artisan app:name seeNameSpace
+
+# instalar AdminLTE
+composer require jeroennoten/laravel-adminlte
+
+# Publish the public assets:
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=assets
+
+# The make:adminlte artisan command
+php artisan make:adminlte
+
+# Publish the configuration file:
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=config
+
+# Translations
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=translations
+
+# Customize views
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=views
+
